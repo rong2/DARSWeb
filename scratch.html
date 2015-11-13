@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>scratch</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="scratch.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+
+    <div class="pos-f-t">
+        <div class="navbar-default navbarts">
+            <button type="button" data-toggle="collapse" data-target="#navbar-header">
+                Print
+            </button>
+            <button type="button" data-toggle="collapse" data-target="#navbar-header">
+                Help
+            </button>
+        </div>
+        <div class="navbar-default navbartsr">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">
+                Expand All
+            </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">
+                Collapse All
+            </button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>DARSWeb</h2>
+            <div class="menu">home | services | contact</div>
+            <script>
+                $(document).ready(function () {
+
+                    var menu = $('.menu');
+                    var origOffsetY = menu.offset().top;
+
+                    function scroll() {
+                        if ($(window).scrollTop() >= origOffsetY) {
+                            $('.menu').addClass('sticky');
+                            $('.container').addClass('menu-padding');
+                        } else {
+                            $('.menu').removeClass('sticky');
+                            $('.container').removeClass('menu-padding');
+                        }
+
+
+                    }
+
+                    document.onscroll = scroll;
+
+                });
+            </script>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
