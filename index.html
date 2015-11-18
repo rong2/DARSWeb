@@ -31,30 +31,51 @@
 	            <!-- Collect the nav links, forms, and other content for toggling -->
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                <ul class="nav navbar-nav">
-	                    <li><a href="#">Print</a></li>
-	                    <li><a href="#">Help</a></li>
+	                    <li><a href="#" onclick="expandAll();window.print()">Print</a></li>
+	                    <li><a href="#" data-toggle="modal" data-target="#myModal">Help</a></li>
 	                    <li class="invisible">
-	                        <a href="#">Required</a>
+	                        <a href="#required">Required</a>
 	                    </li>
 	                    <li class="invisible">
-	                        <a href="#">Technical</a>
+	                        <a href="#technical">Technical</a>
 	                    </li>
 	                    <li class="invisible">
-	                        <a href="#">Humanities</a>
+	                        <a href="#social">Humanities</a>
 	                    </li>
 	                    <li class="invisible">
-	                        <a href="#">Miscellaneous</a>
+	                        <a href="#misc">Miscellaneous</a>
 	                    </li>
 	                    <li class="invisible">
-	                    	<a href="#">Summary</a>
+	                    	<a href="#summary">Summary</a>
 	                    </li>
-	                    <li><a href="#">Expand All</a></li>
-	                    <li><a href="#">Collapse All</a></li>
+	                    <li><a href="#" id="expand-all">Expand All</a></li>
+	                    <li><a href="#" id="collapse-all">Collapse All</a></li>
 	                </ul>
 	            </div>
 	            <!-- /.navbar-collapse -->
 	        </div> <!-- /.container -->
 	    </nav> <!-- /.nav -->
+
+	    <!-- Modal -->
+		<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal">&times;</button>
+		    <h4 class="modal-title">Modal Header</h4>
+		  </div>
+		  <div class="modal-body">
+		    <p>Some text in the modal.</p>
+		  </div>
+		  <div class="modal-footer">
+		    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+
+		</div>
+		</div>
 
 	    <br/><br/><br/><br/>
 
@@ -96,18 +117,18 @@
   				The report assumes successful completion of in-progress courses.</p>
 				<div style="text-align:center">
 					<div class="row" style="display:inline-block;">
-						<button type="button" class="btn btn-default">Required</button>
-	                    <button type="button" class="btn btn-default">Technical</button>
-	                    <button type="button" class="btn btn-default">Humanities</button>
-	                    <button type="button" class="btn btn-default">Miscellaneous</button>
-	                    <button type="button" class="btn btn-default">Summary</button>
+						<a type="button" class="btn btn-default" href="#required">Required</a>
+	                    <a type="button" class="btn btn-default" href="#technical">Technical</a>
+	                    <a type="button" class="btn btn-default" href="#social">Humanities</a>
+	                    <a type="button" class="btn btn-default" href="#misc">Miscellaneous</a>
+	                    <a type="button" class="btn btn-default" href="#summary">Summary</a>
 					</div>
 				</div>
 			</div>
 		</div> <!-- /.container -->
 
 		<!-- Required courses -->
-		<div class="container">
+		<div class="container" id="required">
 			<div class="header jumbotron">
 				<div class="row">
 					<div class="col-sm-3">
@@ -149,7 +170,7 @@
 		</div> <!-- /.required -->
 
 		<!-- Technical courses -->
-		<div class="container">
+		<div class="container" id="technical">
 			<div class="header jumbotron">
 				<div class="row">
 					<div class="col-sm-3">
@@ -192,7 +213,7 @@
 		</div> <!-- /.technical -->
 
 		<!-- Social courses -->
-		<div class="container">
+		<div class="container" id="social">
 			<div class="header jumbotron">
 				<div class="row">
 					<div class="col-sm-3">
@@ -235,7 +256,7 @@
 		</div> <!-- /.social -->
 
 		<!-- Miscellaneous courses -->
-		<div class="container ">
+		<div class="container " id="misc">
 			<div class="header jumbotron">
 				<div class="row">
 					<div class="col-sm-3">
@@ -277,7 +298,7 @@
 		</div> <!-- /.miscellaneous -->
 		
 		<!-- Summary -->
-		<div class="container">
+		<div class="container" id="summary">
 			<div class="header jumbotron">
 				<div class="row">
 					<div class="col-sm-8">

@@ -21,8 +21,45 @@ $(function() {
 		var $details = $jumbotron.find('.details');
 		if ($details.is(":visible")) {
 			$details.hide();
+			$arrow.children('img').removeClass('rotated');
 		} else {
 			$details.show();
+			$arrow.children('img').addClass('rotated');
 		}
 	});
 });
+
+var rotateAllArrows = function() {
+	$('.expand-arrow').children('img').addClass('rotated');
+}
+
+var unRotateAllArrows = function() {
+	$('.expand-arrow').children('img').removeClass('rotated');
+}
+
+var collapseAll = function() {
+    $('.details').hide();
+    unRotateAllArrows();
+}
+
+var expandAll = function() {
+    $('.details').show();
+    rotateAllArrows();
+}
+
+/*
+   Make every section collapse when the page loads
+   */
+$(function() {
+    $(document).ready(collapseAll);
+});
+
+
+$(function() {
+    $('#collapse-all').click(collapseAll);
+});
+
+$(function() {
+    $('#expand-all').click(expandAll);
+});
+
