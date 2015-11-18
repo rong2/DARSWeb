@@ -12,3 +12,17 @@ $(function() {
 		}
 	});
 });
+
+$(function() {
+	$('.expand-arrow').click(function() {
+		console.log(this);
+		var $arrow = $(this);
+		var $jumbotron = $arrow.closest('.jumbotron');
+		var $details = $jumbotron.find('.details');
+		if ($details.is(":visible")) {
+			$details.hide();
+		} else {
+			$details.show();
+		}
+	});
+});
