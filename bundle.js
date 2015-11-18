@@ -82,7 +82,7 @@
 
 
 	// module
-	exports.push([module.id, ".invisible {\n\tdisplay: inline;\n}\n\n.navbar .navbar-nav {\n\tdisplay: inline-block;\n\tfloat: none;\n}\n\n.navbar .navbar-collapse {\n\ttext-align: center;\n}\n\n.description {\n\tfont-size: 125% !important;\n}\n\n.header {\n\tpadding-top: 10px !important;\n\tpadding-bottom: 15px !important;\n}\n\n#legend {\n\tfloat: right;\n\twidth: 250px;\n}\n\n\t#legend #legend-display {\n\t\twidth: 250px;\n\t\tz-index: 100;\n\t\tmargin-top: 10px;\n\t\tpadding: 15px 15px;\n\t\tborder-radius: 5px;\n\n\t\tcolor: #9D9D9D;\n\t\tbackground-color: #222222;\n\t}\n\n\t#legend #add-course-display {\n\t\twidth: 250px;\n\t\tz-index: 100;\n\t\tpadding: 5px 15px;\n\t\tborder-radius: 5px;\n\n\t\tcolor: #9D9D9D;\n\t\tbackground-color: #222222;\n\t}", ""]);
+	exports.push([module.id, ".invisible {\n\tdisplay: inline;\n}\n\n.navbar .navbar-nav {\n\tdisplay: inline-block;\n\tfloat: none;\n}\n\n.navbar .navbar-collapse {\n\ttext-align: center;\n}\n\n.description {\n\tfont-size: 125% !important;\n}\n\n.header {\n\tpadding-top: 10px !important;\n\tpadding-bottom: 15px !important;\n}", ""]);
 
 	// exports
 
