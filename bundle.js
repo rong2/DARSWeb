@@ -82,7 +82,7 @@
 
 
 	// module
-	exports.push([module.id, ".invisible {\n\tdisplay: inline;\n}\n\n.navbar .navbar-nav {\n\tdisplay: inline-block;\n\tfloat: none;\n}\n\n.navbar .navbar-collapse {\n\ttext-align: center;\n}\n\n.description {\n\tfont-size: 125% !important;\n}\n\n.header {\n\tpadding-top: 10px !important;\n\tpadding-bottom: 15px !important;\n}", ""]);
+	exports.push([module.id, ".invisible {\n\tdisplay: inline;\n}\n\n.navbar .navbar-nav {\n\tdisplay: inline-block;\n\tfloat: none;\n}\n\n.navbar .navbar-collapse {\n\ttext-align: center;\n}\n\n.description {\n\tfont-size: 125% !important;\n}\n\n.header {\n\tpadding-top: 10px !important;\n\tpadding-bottom: 15px !important;\n}\n\n.rotated {\n  transform: rotate(180deg);\n  -ms-transform: rotate(180deg); /* IE 9 */\n  -moz-transform: rotate(180deg); /* Firefox */\n  -webkit-transform: rotate(180deg); /* Safari and Chrome */\n  -o-transform: rotate(180deg); /* Opera */\n}", ""]);
 
 	// exports
 
