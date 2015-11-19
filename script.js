@@ -75,3 +75,12 @@ $(function() {
     $('#expand-all').click(expandAll);
 });
 
+
+/* For offsetting the navbar on the website. */
+$(".scroll").click(function(event) {
+   event.preventDefault();
+   $('html, body').animate({
+		scrollTop: $(this.hash).offset().top - 60
+	}, 0);
+});
+
