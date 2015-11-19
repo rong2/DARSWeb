@@ -34,19 +34,19 @@
 	                    <li><a href="#" onclick="expandAll();window.print()">Print</a></li>
 	                    <li><a href="#" data-toggle="modal" data-target="#myModal">Help</a></li>
 	                    <li class="invisible">
-	                        <a href="#required">Required</a>
+                            <a href="#required" onclick="expandSection('#required');">Required</a>
 	                    </li>
 	                    <li class="invisible">
-	                        <a href="#technical">Technical</a>
+	                        <a href="#technical" onclick="expandSection('#technical');">Technical</a>
 	                    </li>
 	                    <li class="invisible">
-	                        <a href="#social">Humanities</a>
+	                        <a href="#social" onclick="expandSection('#social');">Humanities</a>
 	                    </li>
 	                    <li class="invisible">
-	                        <a href="#misc">Miscellaneous</a>
+	                        <a href="#misc" onclick="expandSection('#misc');">Miscellaneous</a>
 	                    </li>
 	                    <li class="invisible">
-	                    	<a href="#summary">Summary</a>
+	                    	<a href="#summary" onclick="expandSection('#summary');">Summary</a>
 	                    </li>
 	                    <li><a href="#" id="expand-all">Expand All</a></li>
 	                    <li><a href="#" id="collapse-all">Collapse All</a></li>
@@ -117,11 +117,11 @@
   				The report assumes successful completion of in-progress courses.</p>
 				<div style="text-align:center">
 					<div class="row" style="display:inline-block;">
-						<a type="button" class="btn btn-default" href="#required">Required</a>
-	                    <a type="button" class="btn btn-default" href="#technical">Technical</a>
-	                    <a type="button" class="btn btn-default" href="#social">Humanities</a>
-	                    <a type="button" class="btn btn-default" href="#misc">Miscellaneous</a>
-	                    <a type="button" class="btn btn-default" href="#summary">Summary</a>
+						<a type="button" class="btn btn-default" href="#required" onclick="expandSection('#required');">Required</a>
+	                    <a type="button" class="btn btn-default" href="#technical" onclick="expandSection('#technical');">Technical</a>
+	                    <a type="button" class="btn btn-default" href="#social" onclick="expandSection('#social');">Humanities</a>
+	                    <a type="button" class="btn btn-default" href="#misc" onclick="expandSection('#misc');">Miscellaneous</a>
+	                    <a type="button" class="btn btn-default" href="#summary" onclick="expandSection('#summary');">Summary</a>
 					</div>
 				</div>
 			</div>

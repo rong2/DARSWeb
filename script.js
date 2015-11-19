@@ -29,6 +29,18 @@ $(function() {
 	});
 });
 
+var collapseSection = function(idSelector) {
+    var section = $(idSelector);
+    section.find('.details').hide();
+    section.find('.expand-arrow').children('img').removeClass('rotated');
+}
+
+var expandSection = function(idSelector) {
+    var section = $(idSelector);
+    section.find('.details').show();
+    section.find('.expand-arrow').children('img').addClass('rotated');
+}
+
 var rotateAllArrows = function() {
 	$('.expand-arrow').children('img').addClass('rotated');
 }
