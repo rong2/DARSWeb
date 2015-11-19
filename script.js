@@ -84,3 +84,13 @@ $(".scroll").click(function(event) {
 	}, 0);
 });
 
+
+$(function() {
+	$('.searchItem').click(function() {
+		$(this).popover({
+			html: true,
+			animation: false,
+			placement: "bottom"
+		});
+	});
+});
