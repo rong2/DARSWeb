@@ -85,12 +85,11 @@ $(".scroll").click(function(event) {
 });
 
 
-$(function() {
-	$('.searchItem').click(function() {
-		$(this).popover({
-			html: true,
-			animation: false,
-			placement: "bottom"
-		});
+
+$('.searchItem').click(function() {
+	$(this).popover({
+		html: true,
+		animation: false,
+		placement: "bottom"
 	});
 });
