@@ -14,7 +14,7 @@ $(function() {
 });
 
 $(function() {
-	$('.expand-arrow').click(function() {
+	$('.expand-arrow').closest('.row').click(function() {
 		console.log(this);
 		var $arrow = $(this);
 		var $jumbotron = $arrow.closest('.jumbotron');
