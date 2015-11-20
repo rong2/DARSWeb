@@ -31,8 +31,8 @@
 	            <!-- Collect the nav links, forms, and other content for toggling -->
 	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	                <ul class="nav navbar-nav">
-	                    <li><a href="#" onclick="expandAll();window.print()">Print</a></li>
-	                    <li><a href="#" data-toggle="modal" data-target="#myModal">Help</a></li>
+	                    <li><a href="" onclick="expandAll();window.print()">Print</a></li>
+	                    <li><a href="" data-toggle="modal" data-target="#myModal">Help</a></li>
 	                    <li class="invisible">
                             <a href="#required" onclick="expandSection('#required');" class="scroll">Required</a>
 	                    </li>
@@ -48,8 +48,8 @@
 	                    <li class="invisible">
 	                    	<a href="#summary" onclick="expandSection('#summary');" class="scroll">Summary</a>
 	                    </li>
-	                    <li><a href="#" id="expand-all">Expand All</a></li>
-	                    <li><a href="#" id="collapse-all">Collapse All</a></li>
+	                    <li><a href="" id="expand-all">Expand All</a></li>
+	                    <li><a href="" id="collapse-all">Collapse All</a></li>
 	                </ul>
 	            </div>
 	            <!-- /.navbar-collapse -->
@@ -64,10 +64,13 @@
 		<div class="modal-content">
 		  <div class="modal-header">
 		    <button type="button" class="close" data-dismiss="modal">&times;</button>
-		    <h4 class="modal-title">Modal Header</h4>
+		    <h4 class="modal-title">Help</h4>
 		  </div>
 		  <div class="modal-body">
-		    <p>Some text in the modal.</p>
+		    <p>What is DARSWeb?</p>
+            <p>Requirement Information</p>
+            <p>Advising Information</p>
+            <p>Status</p>
 		  </div>
 		  <div class="modal-footer">
 		    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -387,7 +390,7 @@
                         <div class="modal fade bs-example-modal-lg 374-modal" tabindex="-1" role="dialog" aria-labelledby="374Modal">
                           <div class="modal-dialog modal-lg">
                             <div class="modal-content" style="padding:15px">
-                              <h4>Courses that fulfill this requirement: Social Science</h4>
+                              <h4>Courses that fulfill this requirement: CS 374</h4>
                               <div class="table-responsive" style="height:100px;overflow:scroll">
                                 <table class="table table-condensed" style="background-color:white">
                                     <thead>
@@ -402,7 +405,6 @@
                                             <td>CS 374: Algorithms and Models of Computation</td>
                                             <td>Professor Alexandra Kolla</td>
                                             <td>Spring 2016</td>
-                                        </tr>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -432,17 +434,107 @@
                 <tr>
                     <th>Fall 2016</th>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" rel="popover" data-content="skjgd">
+                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".421-modal">
                             CS 421
                         </span>
+                        <div class="modal fade bs-example-modal-lg 421-modal" tabindex="-1" role="dialog" aria-labelledby="421Modal">
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content" style="padding:15px">
+                              <h4>Courses that fulfill this requirement: CS 421</h4>
+                              <div class="table-responsive" style="height:100px;overflow:scroll">
+                                <table class="table table-condensed" style="background-color:white">
+                                    <thead>
+                                        <tr>
+                                            <th>Course</th>
+                                            <th>Instructor</th>
+                                            <th>Semesters Offered</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>CS 421: Compilers</td>
+                                            <td>Professor Elsa Gunter</td>
+                                            <td>Spring 2016, Fall 2016, Spring 2017</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" rel="popover" data-content="skjgd">
+                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".4xx-modal">
                             CS 4xx
                         </span>
+                        <div class="modal fade bs-example-modal-lg 4xx-modal" tabindex="-1" role="dialog" aria-labelledby="4xxModal">
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content" style="padding:15px">
+                              <h4>Courses that fulfill this requirement: CS 400s</h4>
+                              <div class="table-responsive" style="height:200px;overflow:scroll">
+                                <table class="table table-condensed" style="background-color:white">
+                                    <thead>
+                                        <tr>
+                                            <th>Course</th>
+                                            <th>Instructor</th>
+                                            <th>Semesters Offered</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>CS 411: Databases</td>
+                                            <td>Professor Ryan Cunningham</td>
+                                            <td>Spring 2016, Fall 2016, Spring 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CS 418: Graphics</td>
+                                            <td>Professor Bob Dylan</td>
+                                            <td>Spring 2016, Fall 2016, Spring 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CS 420: Parallel Programming</td>
+                                            <td>Professor Laxmikant Kale</td>
+                                            <td>Spring 2016, Fall 2016, Spring 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CS 425: Distributed Systems</td>
+                                            <td>Professor Nitin Vaidya</td>
+                                            <td>Spring 2016, Spring 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CS 431: Embedded Systems</td>
+                                            <td>Professor Lui Sha</td>
+                                            <td>Spring 2016, Spring 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CS 440: Artificial Intelligence</td>
+                                            <td>Professor Svetlana Lazebnik</td>
+                                            <td>Spring 2016, Fall 2016, Spring 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CS 446: Machine Learning</td>
+                                            <td>Professor Dan Roth</td>
+                                            <td>Spring 2016, Fall 2016, Spring 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CS 461: Computer Science</td>
+                                            <td>Professor Michael Bailey</td>
+                                            <td>Spring 2016, Fall 2016, Spring 2017</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CS 465: Machine Learning</td>
+                                            <td>Professor Wai-Tai Fu</td>
+                                            <td>Spring 2016, Fall 2016, Spring 2017</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" rel="popover" data-content="skjgd">
+                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".4xx-modal">
                             CS 4xx
                         </span>
                     </td>
@@ -450,27 +542,106 @@
                 <tr>
                     <th>Spring 2017</th>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" rel="popover" data-content="skjgd">
+                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".4xx-modal">
                             CS 4xx
                         </span>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" rel="popover" data-content="skjgd">
+                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".4xx-modal">
                             CS 4xx
                         </span>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" rel="popover" data-content="skjgd">
+                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".xx-modal">
                             XX 4xx
                         </span>
+                        <div class="modal fade bs-example-modal-lg xx-modal" tabindex="-1" role="dialog" aria-labelledby="xxModal">
+                          <div class="modal-dialog modal-lg">
+                            <div class="modal-content" style="padding:15px">
+                              <h4>Courses that fulfill this requirement: Miscellaneous</h4>
+                              <div class="table-responsive" style="height:100px;overflow:scroll">
+                                <table class="table table-condensed" style="background-color:white">
+                                    <thead>
+                                        <tr>
+                                            <th>Course</th>
+                                            <th>Instructor</th>
+                                            <th>Semesters Offered</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>We will add additional courses here!</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
                     </td>
                 </tr>
                 </tbody>
-
             </table>
         </div>
 
-		
+		<!-- Miscellaneous --> 
+        <div class="container" id="misc">
+            <div class="header jumbotron">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h4>Miscellaneous</h4>
+                    </div>
+                    <div class="col-sm-4 expand-arrow" style="padding-top:8px;text-align:right">
+                        <img src="resources/arrow483.svg" alt="drop down" width="30px" height="30px">
+                    </div>
+                </div>
+                <div class="details" style="padding-bottom:15px">
+                    <hr style="border-top-color:#d5d5d5">
+
+                    <div class="table-responsive" style="height:200px;overflow:scroll">
+                        <table class="table table-condensed" style="background-color:white">
+                            <caption>All credits counting towards total hours, but not used to fulfill any other requirements.</caption>
+                            <thead>
+                                <tr>
+                                    <th>Semester Taken</th>
+                                    <th>Course Completed</th>
+                                    <th>Grade Received</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Fall 2013</td>
+                                    <td>CHP 100: Introduction to UIUC</td>
+                                    <td>A+</td>
+                                </tr>
+                                <tr>
+                                    <td>Fall 2014</td>
+                                    <td>STAT 210: Graph Theory</td>
+                                    <td>A-</td>
+                                </tr>
+                                <tr>
+                                    <td>Spring 2015</td>
+                                    <td>DANC 111: Capoeira</td>
+                                    <td>B-</td>
+                                </tr>
+                                <tr>
+                                    <td>Spring 2015</td>
+                                    <td>ENGL 350: Shakespeare and His Plays</td>
+                                    <td>A+</td>
+                                </tr>
+                                <tr>
+                                    <td>Fall 2015</td>
+                                    <td>CHIN 100: Chinese I</td>
+                                    <td>A</td>
+                                </tr>
+                            </tbody>
+                        </table>    
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /.summary -->
+
+
 		<!-- Summary -->
 		<div class="container" id="summary">
 			<div class="header jumbotron">
@@ -486,12 +657,35 @@
 					<hr style="border-top-color:#d5d5d5">
 					<div class="row ">
 						<div class="col-sm-3">
-							<h4>Needs : 100 hours</h4>
+							<h4>Needs : 34 hours</h4>
 						</div>
 					</div>
-
+                    <div class="row ">
+                        <div class="col-sm-2">
+                           Technical Courses
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;background-image:none;background-color:darkgreen">
+                                    <span class="sr-only">80% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                           Humanities Courses
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%;background-image:none;background-color:lightgreen">
+                                    <span class="sr-only">50% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
 					<div class="table-responsive" style="height:200px;overflow:scroll">
                         <table class="table table-condensed" style="background-color:white">
+                            <caption>Summary of courses taken order chronologically.</caption>
                             <thead>
                                 <tr>
                                     <th>Semester Taken</th>

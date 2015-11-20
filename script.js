@@ -84,3 +84,13 @@ $(function() {
 		placement: "bottom"
 	});
 });
+
+
+/* For smooth scrolling on the website. */
+$(".scroll").click(function(event) {
+	event.preventDefault();
+	
+  $('html, body').animate({
+		scrollTop: $(this.hash).offset().top - 60
+	}, 1000);
+});
