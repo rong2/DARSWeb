@@ -54,6 +54,14 @@ var filterCourses = function(oppositeSelector, selector) {
 	}
 }
 
+var clearCourses = function() {
+	var buttons = $('.btn');
+	for (i = 0; i < buttons.length; i++) {
+		var button = buttons[i];
+		button.classList.remove('disabled');
+	}
+}
+
 var rotateAllArrows = function() {
 	$('.expand-arrow').children('img').addClass('rotated');
 }

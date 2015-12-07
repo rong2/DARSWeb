@@ -34,7 +34,7 @@
 	                    <li><a href="" onclick="expandAll();window.print()">Print</a></li>
 	                    <li><a href="" data-toggle="modal" data-target="#myModal">Help</a></li>
 	                    <li class="invisible">
-                            <a href="#required" onclick="expandSection('#required');" class="scroll">Required</a>
+                            <a href="#required" onclick="expandSection('#required');clearCourses();" class="scroll">Required</a>
 	                    </li>
 	                    <li class="invisible">
 	                        <a href="#technical" onclick="filterCourses('.social', '.technical');">Technical</a>
@@ -99,7 +99,7 @@
 							<br />
                             <b>NetID:</b> jpdoe0
                             <br />
-                            <b> Class Standing: </b> Junior 
+                            <b>Class Standing: </b> Junior <span class="label label-primary">James Scholar</span>
                             <br />
 							<b>Progress Code:</b> 0111 BS
 							<br />
@@ -114,7 +114,7 @@
 					<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%;background-image:none;background-color:darkgreen">81 / 108 Credit Hours Completed</div>
 				</div> <!-- /.progress -->
 				<p class="description">
-					<b> GPA: </b> 3.72 <b> Technical GPA: </b>3.8 <span class="label label-primary">James Scholar</span>
+					<b> GPA: </b> 3.72 <b> Technical GPA: </b>3.8 
                     <a class="btn btn-default" data-toggle="modal" data-target=".gpa-modal">More Details</a>
                 </p>
                 <div class="modal fade bs-example-modal-lg gpa-modal" tabindex="-1" role="dialog" aria-labelledby="gpaModal">
@@ -122,7 +122,7 @@
                         <div class="modal-content" style="padding:30px">
                             <h4>Grade Point Scale</h4>
                             <p>Please click <a href="https://secure.registrar.illinois.edu/gpacalculator/">here</a> to calculate your GPA.</p>
-                            <div class="table-responsive" style="height:300px;overflow:scroll">
+                            <div class="table-responsive" style="height:485px;overflow:scroll">
                                 <table class="table table-condensed" style-"background-color:white">
                                     <thead>
                                         <tr>
@@ -194,7 +194,7 @@
   				The report assumes successful completion of in-progress courses.</p>
 				<div style="text-align:center">
 					<div class="row" style="display:inline-block;">
-						<a type="button" class="btn btn-default scroll" href="#required" onclick="expandSection('#required');">Required</a>
+						<a type="button" class="btn btn-default scroll" href="#required" onclick="expandSection('#required');clearCourses();">Required</a>
 	                    <a type="button" class="btn btn-default" onclick="filterCourses('.social', '.technical');">Technical</a>
 	                    <a type="button" class="btn btn-default" onclick="filterCourses('.technical', '.social');">Humanities</a>
 	                    <a type="button" class="btn btn-default scroll" href="#misc" onclick="expandSection('#misc');">Miscellaneous</a>
