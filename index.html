@@ -37,10 +37,10 @@
                             <a href="#required" onclick="expandSection('#required');" class="scroll">Required</a>
 	                    </li>
 	                    <li class="invisible">
-	                        <a href="#technical" onclick="expandSection('#technical');" class="scroll">Technical</a>
+	                        <a href="#technical" onclick="filterCourses('.social', '.technical');">Technical</a>
 	                    </li>
 	                    <li class="invisible">
-	                        <a href="#social" onclick="expandSection('#social');" class="scroll">Humanities</a>
+	                        <a href="#social" onclick="filterCourses('.technical', '.social');">Humanities</a>
 	                    </li>
 	                    <li class="invisible">
 	                        <a href="#misc" onclick="expandSection('#misc');" class="scroll">Miscellaneous</a>
@@ -86,18 +86,20 @@
 	    <div class="container">
 			<div class="jumbotron">
 				<h2>Welcome to DARSWeb 2.0!</h2>
-				<h3>Computer Science | College of Engineering</h3>
+				<h3>Computer Science | College of Engineering</h3> 
 				<br/>
 				<div class="row">
 					<div class="col-sm-2">
 						<img src="resources/woman.png" width="100px" height="100px" class="img-circle">
 					</div>
 					<div class="col-sm-8">
-						<p class="description"><b>Name:</b> Jane P. Doe
+						<p class="description"><b>Name:</b> Jane P. Doe 
 							<br />
 							<b>UIN:</b> 631012345
 							<br />
                             <b>NetID:</b> jpdoe0
+                            <br />
+                            <b> Class Standing: </b> Junior 
                             <br />
 							<b>Progress Code:</b> 0111 BS
 							<br />
@@ -105,28 +107,96 @@
 						</p>
 					</div>
 				</div>
-				<br/>
 
 				<!-- Progress bar -->
 				<h4>Great job, you are 75% of the way to graduation!</h4>
 				<div class="progress">
-					<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%;background-image:none;background-color:darkgreen">
-						<span class="sr-only">75% Complete</span>
-					</div>
+					<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%;background-image:none;background-color:darkgreen">81 / 108 Credit Hours Completed</div>
 				</div> <!-- /.progress -->
 				<p class="description">
-					<b> GPA : </b> 4.0 <b> Technical GPA : </b> 3.9 <span class="label label-primary">James Scholar</span>
-                    <br />
-                    <b> Class Standing : </b> Junior
-				</p>
+					<b> GPA: </b> 3.72 <b> Technical GPA: </b>3.8 <span class="label label-primary">James Scholar</span>
+                    <a class="btn btn-default" data-toggle="modal" data-target=".gpa-modal">More Details</a>
+                </p>
+                <div class="modal fade bs-example-modal-lg gpa-modal" tabindex="-1" role="dialog" aria-labelledby="gpaModal">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content" style="padding:30px">
+                            <h4>Grade Point Scale</h4>
+                            <p>Please click <a href="https://secure.registrar.illinois.edu/gpacalculator/">here</a> to calculate your GPA.</p>
+                            <div class="table-responsive" style="height:300px;overflow:scroll">
+                                <table class="table table-condensed" style-"background-color:white">
+                                    <thead>
+                                        <tr>
+                                            <th>Grade</th>
+                                            <th>Grade Points</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>A+</td>
+                                            <td>4.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>A</td>
+                                            <td>4.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>A-</td>
+                                            <td>3.67</td>
+                                        </tr>
+                                        <tr>
+                                            <td>B+</td>
+                                            <td>3.33</td>
+                                        </tr>
+                                        <tr>
+                                            <td>B</td>
+                                            <td>3.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>B-</td>
+                                            <td>2.67</td>
+                                        </tr>
+                                        <tr>
+                                            <td>C+</td>
+                                            <td>2.33</td>
+                                        </tr>
+                                        <tr>
+                                            <td>C</td>
+                                            <td>2.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>C-</td>
+                                            <td>1.67</td>
+                                        </tr>
+                                        <tr>
+                                            <td>D+</td>
+                                            <td>1.33</td>
+                                        </tr>
+                                        <tr>
+                                            <td>D</td>
+                                            <td>1.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>D-</td>
+                                            <td>0.67</td>
+                                        </tr>
+                                        <tr>
+                                            <td>F / ABS</td>
+                                            <td>0.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 				<p class="description">Please carefully review this academic progress report for accuracy.  It is your responsibility to ensure that you satisfy all degree requirements.
   				<br />
   				The report assumes successful completion of in-progress courses.</p>
 				<div style="text-align:center">
 					<div class="row" style="display:inline-block;">
 						<a type="button" class="btn btn-default scroll" href="#required" onclick="expandSection('#required');">Required</a>
-	                    <a type="button" class="btn btn-default scroll" href="#technical" onclick="expandSection('#technical');">Technical</a>
-	                    <a type="button" class="btn btn-default scroll" href="#social" onclick="expandSection('#social');">Humanities</a>
+	                    <a type="button" class="btn btn-default" onclick="filterCourses('.social', '.technical');">Technical</a>
+	                    <a type="button" class="btn btn-default" onclick="filterCourses('.technical', '.social');">Humanities</a>
 	                    <a type="button" class="btn btn-default scroll" href="#misc" onclick="expandSection('#misc');">Miscellaneous</a>
 	                    <a type="button" class="btn btn-default scroll" href="#summary" onclick="expandSection('#summary');">Summary</a>
 					</div>
@@ -136,202 +206,202 @@
 
         <!-- table -->
 
-        <div class = container>
+        <div class="container" id="required">
             <div class="jumbotron">
                 <table class="table table-condensed" style="background-color:white">
                 <h4>Required Courses Chart</h4> 
-                <caption><p>This is a suggested flow chart of courses that a student is required to take. Note that it is not mandatory to follow the flow chart to graduate.</p>
-                <p>To see possible courses to fulfill a requirement, please click on the course button.</p></caption>
+                <caption>This is a suggested flow chart of courses that a student is required to take. To see possible courses to fulfill a requirement, please click on the course button.<br />
+                <b>Note that it is not mandatory to follow the flow chart to graduate.</b></caption>
                 <tbody>
                 <tr>
                     <th>Fall 2013</th>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A+
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> A+
                         <br/>
                         <b>Credit Hours:</b> 4hrs">
-                            CS 125 <span class="label label-success">Completed</span>
-                        </span>
+                            CS 125
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> B+
+                        <button class="btn btn-success searchItem social" rel="popover" data-content="<b>Grade:</b> B+
                         <br/>
                         <b>Credit Hours:</b> 4hrs
                         <br/>
                         <b>Fulfills:</b> Non-Western">
-                            AAS 105 <span class="label label-success">Completed</span>
-                        </span>
+                            AAS 105
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> B-
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> B-
                         <br/>
                         <b>Credit Hours:</b> 4hrs">
-                            CHEM 102/103 <span class="label label-success">Completed</span>
-                        </span>
+                            CHEM 102/103
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A+
+                        <button class="btn btn-success searchItem social" rel="popover" data-content="<b>Grade:</b> A+
                         <br/>
                         <b>Credit Hours:</b> 2hrs
                         <br/>
                         <b>Fulfills:</b> Composition">
-                            RHET 105 <span class="label label-success">Completed</span>
-                        </span>
+                            RHET 105
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> A
                         <br/>
                         <b>Credit Hours:</b> 2hrs">
-                            ENG 100 <span class="label label-success">Completed</span>
-                        </span>
+                            ENG 100
+                        </button>
                     </td>
                 </tr>
 
                 <tr>
                     <th>Spring 2014</th>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A-
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> A-
                         <br/>
                         <b>Credit Hours:</b> 4hrs">
-                            CS 173 <span class="label label-success">Completed</span>
-                        </span>
+                            CS 173 
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A
+                        <button class="btn btn-success searchItem social" rel="popover" data-content="<b>Grade:</b> A
                         <br/>
                         <b>Credit Hours:</b> 3hrs
                         <br/>
                         <b>Fulfills:</b> Western">
-                            HIST 100 <span class="label label-success">Completed</span>
-                        </span>
+                            HIST 100
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A+
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> A+
                         <br/>
                         <b>Credit Hours:</b> 4hrs">
-                            PHYS 211 <span class="label label-success">Completed</span>
-                        </span>
+                            PHYS 211
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="Completed with AP Credit">
-                            MATH 221 <span class="label label-warning">AP Credit</span>
-                        </span>
+                        <button class="btn btn-warning searchItem technical" rel="popover" data-content="Completed with AP Credit">
+                            MATH 221
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> B+
+                        <button class="btn btn-success searchItem social" rel="popover" data-content="<b>Grade:</b> B+
                         <br/>
                         <b>Credit Hours:</b> 3hrs
                         <br/>
                         <b>Fulfills:</b> Humanities">
-                            ART 102 <span class="label label-success">Completed</span>
-                        </span>
+                            ART 102
+                        </button>
                     </td>
                 </tr>
 
                 <tr>
                     <th>Fall 2014</th>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> A
                         <br/>
                         <b>Credit Hours:</b> 3hrs">
-                            CS 210 <span class="label label-success">Completed</span>
-                        </span>
+                            CS 210
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> A
                         <br/>
                         <b>Credit Hours:</b> 4hrs">
-                            CS 225 <span class="label label-success">Completed</span>
-                        </span>
+                            CS 225
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> A
                         <br/>
                         <b>Credit Hours:</b> 4hrs">
-                            PHYS 212 <span class="label label-success">Completed</span>
-                        </span>
+                            PHYS 212
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="Completed with AP Credit">
-                            MATH 231 <span class="label label-warning">AP Credit</span>
-                        </span>
+                        <button class="btn btn-warning searchItem technical" rel="popover" data-content="Completed with AP Credit">
+                            MATH 231
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A
+                        <button class="btn btn-success searchItem social" rel="popover" data-content="<b>Grade:</b> A
                         <br/>
                         <b>Credit Hours:</b> 3hrs
                         <br/>
                         <b>Fulfills:</b> Social Science">
-                            PSYC 120 <span class="label label-success">Completed</span>
-                        </span>
+                            PSYC 120
+                        </button>
                     </td>
                 </tr>
                 <tr>
                     <th>Spring 2015</th>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> C-
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> C-
                         <br/>
                         <b>Credit Hours:</b> 4hrs">
-                            CS 233 <span class="label label-success">Completed</span>
-                        </span>
+                            CS 233
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A+
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> A+
                         <br/>
                         <b>Credit Hours:</b> 4hrs">
-                            CS 241 <span class="label label-success">Completed</span>
-                        </span>
+                            CS 241
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="This course is in progress">
-                            PHYS 214 <span class="label label-primary">In Progress</span>
-                        </span>
+                        <button class="btn btn-primary searchItem technical" rel="popover" data-content="This course is in progress">
+                            PHYS 214
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="Completed with AP Credit">
-                            MATH 241 <span class="label label-warning">AP Credit</span>
-                        </span>
+                        <button class="btn btn-warning searchItem technical" rel="popover" data-content="Completed with AP Credit">
+                            MATH 241
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="This course is in progress">
-                            HIST 203 <span class="label label-primary">In Progress</span>
-                        </span>
+                        <button class="btn btn-primary searchItem social" rel="popover" data-content="This course is in progress">
+                            HIST 203
+                        </button>
                     </td>
                 </tr>
                 <tr>
                     <th>Fall 2015</th>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> B+
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> B+
                         <br/>
                         <b>Credit Hours:</b> 4hrs">
-                            CS 242 <span class="label label-success">Completed</span>
-                        </span>
+                            CS 242
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="This course is in progress">
-                            CS 357 <span class="label label-primary">In Progress</span>
-                        </span>
+                        <button class="btn btn-primary searchItem technical" rel="popover" data-content="This course is in progress">
+                            CS 357
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A-
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> A-
                         <br/>
                         <b>Credit Hours:</b> 4hrs">
-                            Math 415 <span class="label label-success">Completed</span>
-                        </span>
+                            Math 415
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A+
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> A+
                         <br/>
                         <b>Credit Hours:</b> 4hrs">
-                            Math 461 <span class="label label-success">Completed</span>
-                        </span>
+                            Math 461
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".social-science-modal">
+                        <button class="btn btn-default modalItem social" data-toggle="modal" data-target=".social-science-modal">
                             Social Science
-                        </span>
+                        </button>
                         <div class="modal fade bs-example-modal-lg social-science-modal" tabindex="-1" role="dialog" aria-labelledby="socialScienceModal">
                           <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="padding:15px">
+                            <div class="modal-content" style="padding:30px">
                               <h4>Courses that fulfill this requirement: Social Science</h4>
                               <div class="table-responsive" style="height:200px;overflow:scroll">
                                 <table class="table table-condensed" style="background-color:white">
@@ -389,12 +459,12 @@
                 <tr>
                     <th>Spring 2016</th>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".374-modal">
+                        <button class="btn btn-default modalItem technical" data-toggle="modal" data-target=".374-modal">
                             CS 374
-                        </span>
+                        </button>
                         <div class="modal fade bs-example-modal-lg 374-modal" tabindex="-1" role="dialog" aria-labelledby="374Modal">
                           <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="padding:15px">
+                            <div class="modal-content" style="padding:30px">
                               <h4>Courses that fulfill this requirement: CS 374</h4>
                               <div class="table-responsive" style="height:100px;overflow:scroll">
                                 <table class="table table-condensed" style="background-color:white">
@@ -419,33 +489,33 @@
                     </div>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="<b>Grade:</b> A-
+                        <button class="btn btn-success searchItem technical" rel="popover" data-content="<b>Grade:</b> A-
                         <br/>
                         <b>Credit Hours:</b> 4hrs">
-                            CS 498 RK1 <span class="label label-success">Completed</span>
-                        </span>
+                            CS 498 RK1
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="This course is in progress">
-                            CS 465 <span class="label label-primary">In Progress</span>
-                        </span>
+                        <button class="btn btn-primary searchItem technical" rel="popover" data-content="This course is in progress">
+                            CS 465
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default searchItem" rel="popover" data-content="This course is in progress">
-                            ADV 468 <span class="label label-primary">In Progress</span>
-                        </span>
+                        <button class="btn btn-primary searchItem social" rel="popover" data-content="This course is in progress">
+                            ADV 468
+                        </button>
                     </td>
                     <td></td>
                 </tr>
                 <tr>
                     <th>Fall 2016</th>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".421-modal">
+                        <button class="btn btn-default modalItem technical" data-toggle="modal" data-target=".421-modal">
                             CS 421
-                        </span>
+                        </button>
                         <div class="modal fade bs-example-modal-lg 421-modal" tabindex="-1" role="dialog" aria-labelledby="421Modal">
                           <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="padding:15px">
+                            <div class="modal-content" style="padding:30px">
                               <h4>Courses that fulfill this requirement: CS 421</h4>
                               <div class="table-responsive" style="height:100px;overflow:scroll">
                                 <table class="table table-condensed" style="background-color:white">
@@ -470,12 +540,12 @@
                     </div>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".4xx-modal">
+                        <button class="btn btn-default modalItem technical" data-toggle="modal" data-target=".4xx-modal">
                             CS 4xx
-                        </span>
+                        </button>
                         <div class="modal fade bs-example-modal-lg 4xx-modal" tabindex="-1" role="dialog" aria-labelledby="4xxModal">
                           <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="padding:15px">
+                            <div class="modal-content" style="padding:30px">
                               <h4>Courses that fulfill this requirement: CS 400s</h4>
                               <div class="table-responsive" style="height:200px;overflow:scroll">
                                 <table class="table table-condensed" style="background-color:white">
@@ -540,31 +610,31 @@
                     </div>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".4xx-modal">
+                        <button class="btn btn-default modalItem technical" data-toggle="modal" data-target=".4xx-modal">
                             CS 4xx
-                        </span>
+                        </button>
                     </td>
                     <td></td><td></td>
                 </tr>
                 <tr>
                     <th>Spring 2017</th>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".4xx-modal">
+                        <button class="btn btn-default modalItem technical" data-toggle="modal" data-target=".4xx-modal">
                             CS 4xx
-                        </span>
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".4xx-modal">
+                        <button class="btn btn-default modalItem technical" data-toggle="modal" data-target=".4xx-modal">
                             CS 4xx
-                        </span>
+                        </button>
                     </td>
                     <td>
-                        <span type="button" class="btn btn-default modalItem" data-toggle="modal" data-target=".xx-modal">
+                        <button class="btn btn-default modalItem social" data-toggle="modal" data-target=".xx-modal">
                             XX 4xx
-                        </span>
+                        </button>
                         <div class="modal fade bs-example-modal-lg xx-modal" tabindex="-1" role="dialog" aria-labelledby="xxModal">
                           <div class="modal-dialog modal-lg">
-                            <div class="modal-content" style="padding:15px">
+                            <div class="modal-content" style="padding:30px">
                               <h4>Courses that fulfill this requirement: Miscellaneous</h4>
                               <div class="table-responsive" style="height:100px;overflow:scroll">
                                 <table class="table table-condensed" style="background-color:white">
@@ -586,7 +656,6 @@
                       </div>
                     </div>
                     </td>
-                    <td></td><td></td>
                 </tr>
                 </tbody>
             </table>
@@ -675,9 +744,7 @@
                         </div>
                         <div class="col-sm-10">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;background-image:none;background-color:darkgreen">
-                                    <span class="sr-only">80% Complete</span>
-                                </div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100" style="width:83%;background-image:none;background-color:darkgreen">67 / 80 Credit Hours Completed</div>
                             </div>
                         </div>
                         <div class="col-sm-2">
@@ -685,9 +752,7 @@
                         </div>
                         <div class="col-sm-10">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%;background-image:none;background-color:lightgreen">
-                                    <span class="sr-only">50% Complete</span>
-                                </div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%;background-image:none;background-color:limegreen">14 / 28 Credit Hours Completed</div>
                             </div>
                         </div>
                     </div>

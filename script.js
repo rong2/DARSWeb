@@ -41,6 +41,19 @@ var expandSection = function(idSelector) {
     section.find('.expand-arrow').children('img').addClass('rotated');
 }
 
+var filterCourses = function(oppositeSelector, selector) {
+	var selectedButtons = $(selector);
+	var notSelectedButtons = $(oppositeSelector);
+	for (i = 0; i < notSelectedButtons.length; i++) {
+		var button = notSelectedButtons[i];
+		button.classList.add('disabled');
+	}
+	for (j = 0; j < selectedButtons.length; j++) {
+		var button = selectedButtons[j];
+		button.classList.remove('disabled');
+	}
+}
+
 var rotateAllArrows = function() {
 	$('.expand-arrow').children('img').addClass('rotated');
 }

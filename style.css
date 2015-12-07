@@ -1,3 +1,8 @@
+.btn {
+	/* Not a responsive design... */
+	width: 120px !important;
+}
+
 .invisible {
 	display: inline;
 }
